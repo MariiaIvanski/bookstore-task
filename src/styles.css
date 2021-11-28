@@ -1,0 +1,19 @@
+body {
+  background-color: rgb(61, 86, 178);
+}
+
+h1 {
+  color: rgb(230, 230, 230);
+  margin: 20px auto;
+  text-align: center;
+}
+
+.bookstore form {
+  background-color: rgb(230, 230, 230);
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+}

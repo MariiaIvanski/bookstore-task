@@ -33,7 +33,7 @@ function bookSearch(event) {
       available: 11,
     },
     {
-      name: "The Hobbit : or There and Back Again",
+      name: "The Hobbit, or There and Back Again",
       author: "J. R. R. Tolkien",
       ISBN: 9780261102217,
       available: 4,
