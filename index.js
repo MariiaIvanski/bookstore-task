@@ -1,4 +1,6 @@
-function booksAvailable() {
+function bookSearch(event) {
+  event.preventDefault();
+
   var booksInStore = [
     {
       name: "Dracula",
@@ -38,21 +40,25 @@ function booksAvailable() {
     },
   ];
 
-  function retrieveBookInfo() {
-    if (booksInStore.available === 0) {
-      return "Out of stock";
-    } else if (booksInStore.available > 0 && booksInStore.available < 10) {
-      return "Low stock";
+  function retrieveBookInfo(index) {
+    if (booksInStore[index].available === 0) {
+      alert("Out of stock");
+    } else if (booksInStore[index].available < 10) {
+      alert("Low stock");
     } else {
-      return "In stock!";
+      alert("In stock!");
+    }
+    let placeholder = document.querySelector(`#book-input`);
+    placeholder.value = ``;
+  }
+
+  let chosenBook = document.querySelector(`#book-input`).value;
+  for (let i = 0; i < booksInStore.length; i++) {
+    if (chosenBook === booksInStore[i].name) {
+      retrieveBookInfo(i);
     }
   }
-
-  if (chosenBook.value === booksInStore.name) {
-    retrieveBookInfo();
-  }
-
-  let chosenBook = document.querySelector(`#datalistOptions`);
 }
 
-//chosenBook.addEventListener("click", retrieveBookInfo);
+let form = document.querySelector(`#book-choice`);
+form.addEventListener("submit", bookSearch);
